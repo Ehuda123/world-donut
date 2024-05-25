@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Магазин пончиків</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #ff9800;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2em 0;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 1em;
+            padding: 1em;
+            width: calc(33% - 4em);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .product h3 {
+            margin: 0.5em 0;
+        }
+        .product p {
+            color: #555;
+        }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Магазин пончиків</h1>
+    </header>
+
+    <div class="container">
+        <div class="products">
+            <div class="product">
+            <img src="data:image/jpeg;base64,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" alt="Класичний пончик">
+
+                <h3>Класичний пончик</h3>
+                <p>Смачний класичний пончик з глазур'ю.</p>
+            </div>
+            <div class="product">
+                <img src="https://img.fozzyshop.com.ua/94832-large_default/ponchik-panavi-shokoladnyj.jpg" alt="Шоколадний пончик">
+                <h3>Шоколадний пончик</h3>
+                <p>Пончик з шоколадною глазур'ю і посипкою.</p>
+            </div>
+            <div class="product">
+                <img src="https://static.1000.menu/img/content-v2/f2/25/40026/ponchiki-s-zavarnym-kremom_1572006317_9_max.jpg" alt="Пончик з кремом">
+                <h3>Пончик з кремом</h3>
+                <p>Пончик з ніжним ванільним кремом всередині.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        
+    </footer>
+</body>
+</html>
